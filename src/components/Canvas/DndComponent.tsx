@@ -1,8 +1,7 @@
-import React, { useState } from "react";
-import { useRef } from "react";
-import { useDrag, useDrop } from "react-dnd";
-import { ComNodeSchema } from "../../../redux/codeTreeSlice";
-import "./index.less";
+import React, { useState } from 'react';
+import { useRef } from 'react';
+import { useDrag, useDrop } from 'react-dnd';
+import { ComNodeSchema } from '../../redux/codeTreeSlice';
 
 interface DndComponentProps {
   node: ComNodeSchema;
@@ -24,7 +23,7 @@ export default function DndComponent({
   const ref = useRef<HTMLElement | null>(null);
 
   const [{ isDragging }, drag] = useDrag({
-    type: "ITEM",
+    type: 'ITEM',
     // 用于描述拖动源的普调JS对象s
     item: () => ({ id: node.id, type: node.type, parentId }),
     // 收集功能，用来收集属性，返回一个JS对象，并且返回值会合并到你的组件属性中
@@ -34,20 +33,20 @@ export default function DndComponent({
     }),
     end: (draggedItem, monitor) => {
       const dropResult: any = monitor.getDropResult();
-      console.log("dropResult", dropResult);
+      console.log('dropResult', dropResult);
       if (dropResult.dragItem) {
         const { dragItem, overItem } = dropResult;
         move(dragItem, overItem);
       }
     },
     canDrag: () => {
-      return node.id !== "root";
+      return node.id !== 'root';
     },
   });
 
   const [{ isOver }, drop] = useDrop({
     // 一个字符串，这个放置目标只会对指定类型的拖动源发生反应
-    accept: "ITEM",
+    accept: 'ITEM',
     collect: (monitor) => ({
       isOver: monitor.isOver(),
     }),
@@ -70,7 +69,7 @@ export default function DndComponent({
     },
     drop: (item, monitor) => {
       const didDrop = monitor.didDrop();
-      console.log("drop", item, monitor, didDrop);
+      // console.log('drop', item, monitor, didDrop);
       if (didDrop) {
         return undefined;
       }
@@ -79,8 +78,8 @@ export default function DndComponent({
       const { id: overId, parentId: overParentId } = node as any;
       console.log(
         `node: ${JSON.stringify(
-          node
-        )},dragId:${dragId}, dragParentId:${dragParentId}, overId:${overId}, overParentId:${overParentId}`
+          node,
+        )},dragId:${dragId}, dragParentId:${dragParentId}, overId:${overId}, overParentId:${overParentId}`,
       );
 
       if (dragId) {
@@ -118,7 +117,7 @@ export default function DndComponent({
     key: node.id,
     id: node.id,
     type: node.type,
-    className: `${isOver || isDragging ? "hover" : ""}`,
+    className: `${isOver || isDragging ? 'hover' : ''}`,
     ref,
     children,
   });

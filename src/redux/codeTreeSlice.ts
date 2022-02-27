@@ -42,7 +42,30 @@ const codeTree = createSlice({
       })
     },
     move: (state, action) => {
+      const { dragItem, overItem } = action.payload;
+      console.log('move', dragItem, overItem)
 
+      const { dragId, dragParentId } = dragItem;
+      const { overId, overParentId } = overItem;
+
+      let item: any;
+
+      traverse(state, (sub) => {
+        if (sub.id === dragParentId) {
+          const dragIndex = sub.children.findIndex((item) => item.id === dragId);
+          item = sub.children.splice(dragIndex, 1);
+        }
+        return true;
+      });
+
+      traverse(state, (sub) => {
+        if (sub.id === overParentId) {
+          const overIndex = sub.children.findIndex((item) => item.id === overId);
+          sub.children.splice(overIndex, 0, item);
+          return false;
+        }
+        return true;
+      })
     },
     update: (state, action) => {
 
