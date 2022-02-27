@@ -1,25 +1,15 @@
-import { nanoid } from '@reduxjs/toolkit';
-import { useContext, useEffect, useRef, useState } from 'react';
-import './App.css';
-import Canvas from './components/Canvas';
-import Explorer from './components/Explorer';
-import { append } from './redux/codeTreeSlice';
-import { useAppDispatch, useAppSelector } from './redux/hooks';
-import Frame, { FrameContext } from 'react-frame-component';
-import { DndContext, DndProvider } from 'react-dnd';
-import { HTML5Backend } from 'react-dnd-html5-backend';
-import { DeviceFrameset } from 'react-device-frameset';
+import { nanoid } from "@reduxjs/toolkit";
+import { useContext, useEffect, useRef, useState } from "react";
+import "./App.css";
+import Canvas from "./components/Canvas";
+import Explorer from "./components/Explorer";
+import { append } from "./redux/codeTreeSlice";
+import { useAppDispatch, useAppSelector } from "./redux/hooks";
 
-const DndFrame = ({ children }: any) => {
-  const { dragDropManager } = useContext(DndContext);
-  const { window } = useContext(FrameContext);
-
-  useEffect(() => {
-    (dragDropManager?.getBackend() as any).addEventListeners(window);
-  });
-
-  return children;
-};
+import { DndContext, DndProvider } from "react-dnd";
+import { HTML5Backend } from "react-dnd-html5-backend";
+import { DeviceFrameset } from "react-device-frameset";
+import { SketchPicker } from "react-color";
 
 function App() {
   const codeTreeState = useAppSelector((state) => state.codeTree);
@@ -28,16 +18,24 @@ function App() {
   const onEndDrag = (hoverId: string, type: string) => {
     const item = {
       id: nanoid(10),
+      parentId: hoverId,
       type,
-      props: {
-        style: {
-          width: '50px',
-          height: '50px',
-          background: 'black',
-        },
-      },
+      props: {},
       children: [],
-    };
+    } as any;
+    if (type === "div") {
+      item.props.style = {
+        width: "100%",
+        height: "64px",
+        backgroundColor: "blue",
+      };
+    } else {
+      item.props.style = {
+        width: "16px",
+        height: "8px",
+        backgroundColor: "black",
+      };
+    }
     dispatch(append({ hoverId, item }));
   };
 
@@ -46,14 +44,10 @@ function App() {
   return (
     <>
       <DndProvider backend={HTML5Backend}>
-        <div style={{ display: 'flex', flexDirection: 'row' }}>
+        <div style={{ display: "flex", flexDirection: "row" }}>
           <Explorer onEndDrag={onEndDrag} />
-          <DeviceFrameset device="iPhone 8" color="gold">
-            <Frame style={{ width: '100%', height: '100%' }}>
-              <DndFrame>
-                <Canvas codeTree={codeTreeState} move={moveNode} />
-              </DndFrame>
-            </Frame>
+          <DeviceFrameset device="iPhone X" color="gold">
+            <Canvas codeTree={codeTreeState} move={moveNode} />
           </DeviceFrameset>
         </div>
       </DndProvider>

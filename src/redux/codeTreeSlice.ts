@@ -19,9 +19,8 @@ const initialState: CodeTreeState = {
   type: 'div',
   props: {
     style: {
-      width: '400px',
-      height: '800px',
-      border: '1px solid gray',
+      width: '100%',
+      height: '100%',
       backgroundColor: 'red'
     }
   },
