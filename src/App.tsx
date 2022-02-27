@@ -48,8 +48,8 @@ function App() {
       <DndProvider backend={HTML5Backend}>
         <div style={{ display: 'flex', flexDirection: 'row' }}>
           <Explorer onEndDrag={onEndDrag} />
-          <DeviceFrameset device="iPhone 8" color="gold" landscape>
-            <Frame style={{ width: '414px', height: '828px' }}>
+          <DeviceFrameset device="iPhone 8" color="gold">
+            <Frame style={{ width: '100%', height: '100%' }}>
               <DndFrame>
                 <Canvas codeTree={codeTreeState} move={moveNode} />
               </DndFrame>

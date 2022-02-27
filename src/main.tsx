@@ -4,7 +4,7 @@ import './index.css';
 import App from './App';
 import { Provider } from 'react-redux';
 import store from './redux/store';
-import 'react-device-frameset/dist/styles/marvel-devices.min.css';
+import 'react-device-frameset/styles/marvel-devices.min.css';
 
 ReactDOM.render(
   <React.StrictMode>
