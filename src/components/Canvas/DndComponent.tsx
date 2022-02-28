@@ -56,7 +56,6 @@ export default function DndComponent({
       isOver: monitor.isOver(),
     }),
     hover: (item: any, monitor) => {
-      // console.log("hover", item, monitor);
       // 被拖动的卡片的索引
       const dragId = item.id,
         parentId = item.parentId;
@@ -127,7 +126,6 @@ export default function DndComponent({
     key: node.id,
     id: node.id,
     type: node.type,
-    className: `${isOver || isDragging ? "hover" : ""}`,
     ref,
     children,
   });

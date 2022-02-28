@@ -11,8 +11,8 @@ const comlib = [
   },
   {
     id: nanoid(10),
-    type: "input",
-    name: "输入框",
+    type: "p",
+    name: "文本",
   },
   {
     id: nanoid(10),
