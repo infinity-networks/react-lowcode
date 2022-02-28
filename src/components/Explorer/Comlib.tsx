@@ -1,4 +1,4 @@
-import { Button, Modal } from "@arco-design/web-react";
+import { Button, Card, Modal } from "@arco-design/web-react";
 import { nanoid } from "@reduxjs/toolkit";
 import { useState } from "react";
 import SourceItem from "./SourceItem";
@@ -39,11 +39,11 @@ export default function ({ onEndDrag }: any) {
           will be closed immediately once you press the OK button.
         </p>
       </Modal>
-      <div
+      {/* <div
         style={{
           display: "flex",
-          minWidth: "200px",
-          width: "100%",
+          flexDirection: "column",
+          width: "200px",
         }}
       >
         {comlib.map((item) => (
@@ -56,7 +56,19 @@ export default function ({ onEndDrag }: any) {
             {item.name}
           </SourceItem>
         ))}
-      </div>
+      </div> */}
+      <Card style={{ width: "100%" }}>
+        {comlib.map((item, index) => (
+          <SourceItem
+            key={item.id}
+            id={item.id}
+            type={item.type}
+            onEndDrag={onEndDrag}
+          >
+            <Card title={item.name}></Card>
+          </SourceItem>
+        ))}
+      </Card>
     </div>
   );
 }

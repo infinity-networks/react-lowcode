@@ -1,11 +1,11 @@
-import { useRef } from 'react';
-import { useDrag } from 'react-dnd';
+import { useRef } from "react";
+import { useDrag } from "react-dnd";
 
 export default function ({ children, id, type, onEndDrag }: any) {
   const ref = useRef(null);
 
   const [{ isDragging }, drag] = useDrag({
-    type: 'ITEM',
+    type: "ITEM",
     // 用于描述拖动源的普调JS对象s
     item: () => ({ id, type }),
     // 收集功能，用来收集属性，返回一个JS对象，并且返回值会合并到你的组件属性中
@@ -15,7 +15,7 @@ export default function ({ children, id, type, onEndDrag }: any) {
     }),
     end: (draggedItem, monitor) => {
       const dropResult = monitor.getDropResult() as any;
-      console.log('sourceItem endDrag', draggedItem.type, dropResult);
+      console.log("sourceItem endDrag", id, draggedItem.type, dropResult);
       // 确定组件已经放置到右侧区域，有结果返回的时候，调用新增组件的方法
       if (monitor.didDrop() && dropResult) {
         onEndDrag(dropResult.id, draggedItem.type);
@@ -26,7 +26,20 @@ export default function ({ children, id, type, onEndDrag }: any) {
   drag(ref);
 
   return (
-    <div ref={ref} style={{ width: '100%', height: '36px', background: 'red' }}>
+    <div
+      ref={ref}
+      style={{
+        width: "64px",
+        height: "64px",
+        background: "#F7F8FA",
+        borderRadius: "4px",
+        border: "1px solid #E5E6EB",
+        margin: "8px",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+      }}
+    >
       {children}
     </div>
   );

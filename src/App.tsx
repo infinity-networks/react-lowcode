@@ -1,20 +1,22 @@
 import {
   Avatar,
+  Card,
   Dropdown,
   Layout,
   Link,
   Menu,
   ResizeBox,
   Space,
-} from '@arco-design/web-react';
-import { IconGithub, IconNotification } from '@arco-design/web-react/icon';
-import { useAppDispatch, useAppSelector } from './redux/hooks';
-import { nanoid } from '@reduxjs/toolkit';
-import { append, move } from './redux/codeTreeSlice';
-import Explorer from './components/Explorer';
-import Canvas from './components/Canvas';
-import { DeviceFrameset } from 'react-device-frameset';
-import './App.less';
+} from "@arco-design/web-react";
+import { IconGithub, IconNotification } from "@arco-design/web-react/icon";
+import { useAppDispatch, useAppSelector } from "./redux/hooks";
+import { nanoid } from "@reduxjs/toolkit";
+import { append, move, setFocusId } from "./redux/codeTreeSlice";
+import Explorer from "./components/Explorer";
+import Canvas from "./components/Canvas";
+import { DeviceFrameset } from "react-device-frameset";
+import "./App.less";
+import Outline from "./components/Explorer/Outline";
 
 const Header = Layout.Header;
 const Sider = Layout.Sider;
@@ -27,22 +29,22 @@ export default function () {
   const onEndDrag = (hoverId: string, type: string) => {
     const item = {
       id: nanoid(10),
-      parentId: hoverId,
+      title: "默认节点",
       type,
       props: {},
       children: [],
     } as any;
-    if (type === 'div') {
+    if (type === "div") {
       item.props.style = {
-        width: '100%',
-        height: '64px',
-        backgroundColor: 'blue',
+        width: "100%",
+        height: "64px",
+        backgroundColor: "blue",
       };
     } else {
       item.props.style = {
-        width: '16px',
-        height: '8px',
-        backgroundColor: 'black',
+        width: "16px",
+        height: "8px",
+        backgroundColor: "black",
       };
     }
     dispatch(append({ hoverId, item }));
@@ -50,6 +52,10 @@ export default function () {
 
   const moveNode = (dragItem: any, overItem: any) => {
     dispatch(move({ dragItem, overItem }));
+  };
+
+  const focusedNode = (id: string) => {
+    dispatch(setFocusId({ foucsId: id }));
   };
 
   return (
@@ -60,7 +66,7 @@ export default function () {
             <svg
               width="20"
               height="20"
-              style={{ margin: '16px' }}
+              style={{ margin: "16px" }}
               viewBox="0 0 20 20"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -89,7 +95,7 @@ export default function () {
             }
           >
             <Avatar
-              style={{ backgroundColor: '#3370ff', margin: '8px 16px 8px 8px' }}
+              style={{ backgroundColor: "#3370ff", margin: "8px 16px 8px 8px" }}
             >
               <img
                 alt="avatar"
@@ -100,38 +106,43 @@ export default function () {
         </Space>
       </Header>
       <Layout>
-        <Sider style={{ width: '64px' }}></Sider>
+        <Sider style={{ width: "64px" }}></Sider>
         <Sider
-          resizeDirections={['right']}
+          resizeDirections={["right"]}
           style={{ minWidth: 150, maxWidth: 500 }}
         >
           <Explorer onEndDrag={onEndDrag} />
+          <Outline treeData={codeTreeState.children} />
         </Sider>
         <Layout>
           <Content
             style={{
-              backgroundColor: '#F0F1F4',
-              overflow: 'hidden',
-              height: '100%',
+              backgroundColor: "#F0F1F4",
+              overflow: "hidden",
+              height: "100%",
             }}
           >
             <ResizeBox.Split
               direction="vertical"
-              style={{ height: '100%', overflow: 'hidden', zIndex: 10000 }}
+              style={{ height: "100%", overflow: "hidden", zIndex: 10000 }}
               panes={[
                 <div
                   style={{
-                    overflow: 'hidden',
-                    width: '100%',
-                    display: 'flex',
-                    justifyContent: 'center',
+                    overflow: "hidden",
+                    width: "100%",
+                    display: "flex",
+                    justifyContent: "center",
                   }}
                 >
                   <DeviceFrameset device="iPhone 8" color="black">
-                    <Canvas codeTree={codeTreeState} move={moveNode} />
+                    <Canvas
+                      codeTree={codeTreeState}
+                      move={moveNode}
+                      focusedNode={focusedNode}
+                    />
                   </DeviceFrameset>
                 </div>,
-                <div style={{ minHeight: '48px' }}>逻辑</div>,
+                <div style={{ minHeight: "48px" }}>逻辑</div>,
               ]}
             ></ResizeBox.Split>
           </Content>
