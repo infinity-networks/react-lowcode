@@ -1,7 +1,7 @@
-import React, { useState } from "react";
-import { useRef } from "react";
-import { useDrag, useDrop } from "react-dnd";
-import { ComNodeSchema, setFocusId } from "../../redux/codeTreeSlice";
+import React, { useState } from 'react';
+import { useRef } from 'react';
+import { useDrag, useDrop } from 'react-dnd';
+import { ComNodeSchema, setFocusId } from '../../redux/codeTreeSlice';
 
 interface DndComponentProps {
   node: ComNodeSchema;
@@ -12,8 +12,16 @@ interface DndComponentProps {
   children: any;
 }
 
-const focusStyle = {
-  border: "1px dashed #FA6400",
+const focusedStyle = {
+  border: '1px dashed #FA6400',
+};
+
+const hoverTopStyle = {
+  borderTop: '2px solid red',
+};
+
+const hoverBottomStyle = {
+  borderBottom: '2px solid red',
 };
 
 export default function DndComponent({
@@ -24,11 +32,11 @@ export default function DndComponent({
   parentId,
   children,
 }: DndComponentProps) {
-  const [hoverPosition, setHoverPosition] = useState("");
+  const [hoverPosition, setHoverPosition] = useState('');
   const ref = useRef<HTMLElement | null>(null);
 
   const [{ isDragging }, drag] = useDrag({
-    type: "ITEM",
+    type: 'ITEM',
     // 用于描述拖动源的普调JS对象s
     item: () => ({ id: node.id, type: node.type, parentId }),
     // 收集功能，用来收集属性，返回一个JS对象，并且返回值会合并到你的组件属性中
@@ -38,20 +46,20 @@ export default function DndComponent({
     }),
     end: (draggedItem, monitor) => {
       const dropResult: any = monitor.getDropResult();
-      console.log("dropResult", dropResult);
+      console.log('dropResult', dropResult);
       if (dropResult.dragItem && dropResult.overItem) {
         const { dragItem, overItem } = dropResult;
         move(dragItem, overItem);
       }
     },
     canDrag: () => {
-      return node.id !== "root";
+      return node.id !== 'root';
     },
   });
 
   const [{ isOver }, drop] = useDrop({
     // 一个字符串，这个放置目标只会对指定类型的拖动源发生反应
-    accept: "ITEM",
+    accept: 'ITEM',
     collect: (monitor) => ({
       isOver: monitor.isOver(),
     }),
@@ -70,12 +78,12 @@ export default function DndComponent({
       const { x, y } = monitor.getClientOffset() as any; // event.clientY
       const hoverClientY = y - top,
         hoverClientX = x - left;
-      console.log("hover", ref.current?.id, halfOfHoverHeight, hoverClientY);
+      console.log('hover', ref.current?.id, halfOfHoverHeight, hoverClientY);
       //  console.log("hover", ref.current?.id, halfOfHoverHeight, hoverClientY);
       if (hoverClientY > halfOfHoverHeight) {
-        setHoverPosition("bottom");
+        setHoverPosition('bottom');
       } else {
-        setHoverPosition("top");
+        setHoverPosition('top');
       }
       // if (node.props.layout && node.props.layout === "flex-column") {
 
@@ -89,7 +97,7 @@ export default function DndComponent({
     },
     drop: (item, monitor) => {
       const didDrop = monitor.didDrop();
-      console.log("drop", item, monitor, didDrop);
+      console.log('drop', item, monitor, didDrop);
       if (didDrop) {
         return undefined;
       }
@@ -135,7 +143,7 @@ export default function DndComponent({
 
   return (
     <>
-      {node.id === "root" ? (
+      {node.id === 'root' ? (
         React.createElement(node.type, {
           ...node.props,
           key: node.id,
@@ -149,11 +157,11 @@ export default function DndComponent({
           ref={ref as any}
           id={node.id}
           style={{
-            border: isOver || focusId === node.id ? "1px dashed gray" : "",
-            borderTop: hoverPosition === "top" ? "2px solid red" : "",
-            borderBottom: hoverPosition === "bottom" ? "2px solid red" : "",
+            border: isOver || focusId === node.id ? '1px dashed gray' : '',
+            borderTop: hoverPosition === 'top' ? '2px solid red' : '',
+            borderBottom: hoverPosition === 'bottom' ? '2px solid red' : '',
           }}
-          onClick={() => {
+          onClick={(e) => {
             focusedNode(node.id);
           }}
         >

@@ -95,7 +95,6 @@ const codeTree = createSlice({
           return true;
         })
       }
-
     },
     update: (state, action) => {
 

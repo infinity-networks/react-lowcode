@@ -1,20 +1,29 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-export interface ComRefSchema {
+export interface ComInfoSchema {
   name: string;
-  url: string;
+  editor: string;
+  runtime: string;
+  inputs: Record<string, any>;
+  outputs: Record<string, any>;
 }
 
 export interface ComGroupSchema {
   name: string;
-  components: ComRefSchema[];
+  components: [
+    {
+      namespace: string;
+      url: string;
+      info: ComInfoSchema;
+    }
+  ]
 }
 
 export interface ComLibSchema {
   name: string;
   uid: string;
   version: string;
-  components: ComGroupSchema[];
+  groups: ComGroupSchema[];
 }
 
 const initialState: ComLibSchema[] = [
