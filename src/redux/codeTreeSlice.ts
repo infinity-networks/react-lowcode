@@ -23,36 +23,14 @@ const initialState: CodeTreeState = {
     style: {
       width: '100%',
       height: '100%',
-      backgroundColor: '#EEE'
-    }
+      backgroundColor: 'white',
+      display: 'flex',
+      flexDirection: 'column',
+    },
+    layout: 'flex-column'
   },
   children: [
-    {
-      id: nanoid(10),
-      type: 'div',
-      title: '1节点',
-      props: {
-        style: {
-          width: '100px',
-          height: '100px',
-          backgroundColor: 'black'
-        }
-      },
-      children: []
-    },
-    {
-      id: nanoid(10),
-      type: 'div',
-      title: '1节点',
-      props: {
-        style: {
-          width: '50px',
-          height: '50px',
-          backgroundColor: 'red'
-        }
-      },
-      children: []
-    }
+
   ]
 }
 
@@ -71,15 +49,13 @@ const codeTree = createSlice({
       })
     },
     move: (state, action) => {
-      const { dragItem, overItem } = action.payload;
-      console.log('move', dragItem, overItem)
+      const { dragItem, overItem, hoverPosition } = action.payload;
+      // console.log('move', dragItem, overItem)
 
       const { dragId, dragType, dragParentId } = dragItem;
       const { overId, overType, overParentId } = overItem;
 
       let item: any;
-
-      console.log('tree',)
 
       traverse(state, (sub) => {
         if (sub.id === dragParentId) {
@@ -90,24 +66,36 @@ const codeTree = createSlice({
         return true;
       });
 
-      traverse(state, (sub) => {
-        if (!isParentNode(overType) && sub.id === overParentId) {
-          const overIndex = sub.children.findIndex(item => item.id === overId);
-          sub.children.splice(overIndex, 0, item);
-          return false;
-        }
-        //非嵌套标签往父层插入
-
-        if (isParentNode(overType) && sub.id === overId) {
-          if (sub.children) {
-            sub.children.unshift(item)
-          } else {
-            sub.children = [item]
+      if (!isParentNode(overType)) {
+        traverse(state, (sub) => {
+          if (sub.id === overParentId) {
+            const dragIndex = sub.children.findIndex((item) => item.id === dragId);
+            if (hoverPosition === 'left' || hoverPosition === 'top') {
+              if (dragIndex === 0) {
+                sub.children.unshift(item);
+              } else {
+                sub.children.splice(dragIndex - 1, 0,)
+              }
+            } else {
+              if (dragIndex === sub.children.length - 1) {
+                sub.children.push(item);
+              } else {
+                sub.children.splice(dragIndex + 1, 0,)
+              }
+            }
+            return false;
           }
-          return false;
-        }
-        return true;
-      })
+          return true;
+        });
+      } else {
+        traverse(state, (sub) => {
+          if (sub.id === overId) {
+            sub.children.push(item);
+          }
+          return true;
+        })
+      }
+
     },
     update: (state, action) => {
 

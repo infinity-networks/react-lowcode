@@ -50,8 +50,8 @@ export default function () {
     dispatch(append({ hoverId, item }));
   };
 
-  const moveNode = (dragItem: any, overItem: any) => {
-    dispatch(move({ dragItem, overItem }));
+  const moveNode = (dragItem: any, overItem: any, hoverPosition: string) => {
+    dispatch(move({ dragItem, overItem, hoverPosition }));
   };
 
   const focusedNode = (id: string) => {

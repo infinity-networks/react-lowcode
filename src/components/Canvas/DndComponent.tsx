@@ -63,18 +63,29 @@ export default function DndComponent({
         dropParentId = parentId;
       if (dragId === dropId) return;
       if (!monitor.isOver({ shallow: true })) return;
-      const { top, bottom } = ref.current?.getBoundingClientRect() as any;
-      const halfOfHoverHeight = (bottom - top) / 2;
-      const { y } = monitor.getClientOffset() as any; // event.clientY
-      const hoverClientY = y - top;
+      const { left, right, top, bottom } =
+        ref.current?.getBoundingClientRect() as any;
+      const halfOfHoverHeight = (bottom - top) / 2,
+        halfOfHoverWidth = (right - left) / 2;
+      const { x, y } = monitor.getClientOffset() as any; // event.clientY
+      const hoverClientY = y - top,
+        hoverClientX = x - left;
       console.log("hover", ref.current?.id, halfOfHoverHeight, hoverClientY);
       //  console.log("hover", ref.current?.id, halfOfHoverHeight, hoverClientY);
-
       if (hoverClientY > halfOfHoverHeight) {
         setHoverPosition("bottom");
       } else {
         setHoverPosition("top");
       }
+      // if (node.props.layout && node.props.layout === "flex-column") {
+
+      // } else {
+      //   if (hoverClientX > halfOfHoverWidth) {
+      //     setHoverPosition("right");
+      //   } else {
+      //     setHoverPosition("left");
+      //   }
+      // }
     },
     drop: (item, monitor) => {
       const didDrop = monitor.didDrop();
@@ -106,7 +117,7 @@ export default function DndComponent({
         const dragItem = { dragId, dragType, dragParentId };
         const overItem = { overId, overType, overParentId };
 
-        move(dragItem, overItem);
+        move(dragItem, overItem, hoverPosition);
 
         return {
           dragItem,
@@ -139,8 +150,8 @@ export default function DndComponent({
           id={node.id}
           style={{
             border: isOver ? "1px dashed gray" : "",
-            borderTop: hoverPosition === "top" ? "1px solid red" : "",
-            borderBottom: hoverPosition === "bottom" ? "1px solid red" : "",
+            borderTop: hoverPosition === "top" ? "2px solid red" : "",
+            borderBottom: hoverPosition === "bottom" ? "2px solid red" : "",
           }}
         >
           {React.createElement(node.type, {
