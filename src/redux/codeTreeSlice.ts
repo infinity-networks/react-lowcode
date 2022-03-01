@@ -1,4 +1,4 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice, nanoid } from "@reduxjs/toolkit";
 import React from "react";
 import { isParentNode, traverse } from "../utils";
 
@@ -23,10 +23,37 @@ const initialState: CodeTreeState = {
     style: {
       width: '100%',
       height: '100%',
-      backgroundColor: 'white'
+      backgroundColor: '#EEE'
     }
   },
-  children: []
+  children: [
+    {
+      id: nanoid(10),
+      type: 'div',
+      title: '1节点',
+      props: {
+        style: {
+          width: '100px',
+          height: '100px',
+          backgroundColor: 'black'
+        }
+      },
+      children: []
+    },
+    {
+      id: nanoid(10),
+      type: 'div',
+      title: '1节点',
+      props: {
+        style: {
+          width: '50px',
+          height: '50px',
+          backgroundColor: 'red'
+        }
+      },
+      children: []
+    }
+  ]
 }
 
 const codeTree = createSlice({

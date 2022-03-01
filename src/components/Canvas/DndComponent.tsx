@@ -24,7 +24,7 @@ export default function DndComponent({
   parentId,
   children,
 }: DndComponentProps) {
-  console.log("DndComponent", node, parentId);
+  const [hoverPosition, setHoverPosition] = useState("");
   const ref = useRef<HTMLElement | null>(null);
 
   const [{ isDragging }, drag] = useDrag({
@@ -39,7 +39,7 @@ export default function DndComponent({
     end: (draggedItem, monitor) => {
       const dropResult: any = monitor.getDropResult();
       console.log("dropResult", dropResult);
-      if (dropResult.dragItem) {
+      if (dropResult.dragItem && dropResult.overItem) {
         const { dragItem, overItem } = dropResult;
         move(dragItem, overItem);
       }
@@ -62,13 +62,18 @@ export default function DndComponent({
       const dropId = node.id,
         dropParentId = parentId;
       if (dragId === dropId) return;
+      if (!monitor.isOver({ shallow: true })) return;
       const { top, bottom } = ref.current?.getBoundingClientRect() as any;
       const halfOfHoverHeight = (bottom - top) / 2;
       const { y } = monitor.getClientOffset() as any; // event.clientY
       const hoverClientY = y - top;
+      console.log("hover", ref.current?.id, halfOfHoverHeight, hoverClientY);
+      //  console.log("hover", ref.current?.id, halfOfHoverHeight, hoverClientY);
 
       if (hoverClientY > halfOfHoverHeight) {
+        setHoverPosition("bottom");
       } else {
+        setHoverPosition("top");
       }
     },
     drop: (item, monitor) => {
@@ -85,10 +90,6 @@ export default function DndComponent({
       } = item as any;
       const { id: overId, type: overType } = node as any,
         overParentId = parentId;
-
-      console.log(
-        `dragId:${dragId}, dragParentId:${dragParentId}, overId:${overId}, overParentId:${overParentId}`
-      );
 
       if (dragId) {
         if (
@@ -121,12 +122,36 @@ export default function DndComponent({
 
   drag(drop(ref));
 
-  return React.createElement(node.type, {
-    ...node.props,
-    key: node.id,
-    id: node.id,
-    type: node.type,
-    ref,
-    children,
-  });
+  return (
+    <>
+      {node.id === "root" ? (
+        React.createElement(node.type, {
+          ...node.props,
+          key: node.id,
+          id: node.id,
+          type: node.type,
+          ref,
+          children,
+        })
+      ) : (
+        <div
+          ref={ref as any}
+          id={node.id}
+          style={{
+            border: isOver ? "1px dashed gray" : "",
+            borderTop: hoverPosition === "top" ? "1px solid red" : "",
+            borderBottom: hoverPosition === "bottom" ? "1px solid red" : "",
+          }}
+        >
+          {React.createElement(node.type, {
+            ...node.props,
+            key: node.id,
+            id: node.id,
+            type: node.type,
+            children,
+          })}
+        </div>
+      )}
+    </>
+  );
 }
