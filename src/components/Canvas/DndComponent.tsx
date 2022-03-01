@@ -149,9 +149,12 @@ export default function DndComponent({
           ref={ref as any}
           id={node.id}
           style={{
-            border: isOver ? "1px dashed gray" : "",
+            border: isOver || focusId === node.id ? "1px dashed gray" : "",
             borderTop: hoverPosition === "top" ? "2px solid red" : "",
             borderBottom: hoverPosition === "bottom" ? "2px solid red" : "",
+          }}
+          onClick={() => {
+            focusedNode(node.id);
           }}
         >
           {React.createElement(node.type, {
