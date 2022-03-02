@@ -1,6 +1,7 @@
 import { createSlice, nanoid } from "@reduxjs/toolkit";
 import React from "react";
 import { isParentNode, traverse } from "../utils";
+import { ComInfoSchema } from "./comLibSlice";
 
 export interface ComNodeSchema {
   id: string;
@@ -10,8 +11,14 @@ export interface ComNodeSchema {
   children: ComNodeSchema[];
 }
 
+export interface ComRefSchema {
+  id: string;
+  comInfo: ComInfoSchema;
+}
+
 export interface CodeTreeState extends ComNodeSchema {
   foucsId?: string;
+  comref?: ComRefSchema[];
 }
 
 const initialState: CodeTreeState = {
@@ -31,7 +38,8 @@ const initialState: CodeTreeState = {
   },
   children: [
 
-  ]
+  ],
+  comref: []
 }
 
 const codeTree = createSlice({

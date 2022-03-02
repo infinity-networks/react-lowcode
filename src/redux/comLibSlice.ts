@@ -4,8 +4,8 @@ export interface ComInfoSchema {
   name: string;
   editor: string;
   runtime: string;
-  inputs: Record<string, any>;
-  outputs: Record<string, any>;
+  inputs: Record<string, any>[];
+  outputs: Record<string, any>[];
 }
 
 export interface ComGroupSchema {
@@ -26,14 +26,14 @@ export interface ComLibSchema {
   groups: ComGroupSchema[];
 }
 
-const initialState: ComLibSchema[] = [
-
-]
+const initialState: ComLibSchema[] = []
 
 const comlib = createSlice({
   name: 'comlib',
   initialState,
   reducers: {
-
+    append: (state, action) => { },
+    update: (state, action) => { },
+    remove: (state, action) => { },
   }
-})
+});

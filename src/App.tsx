@@ -17,6 +17,7 @@ import Canvas from "./components/Canvas";
 import { DeviceFrameset } from "react-device-frameset";
 import "./App.less";
 import Outline from "./components/Explorer/Outline";
+import Inspector from "./components/Inspector";
 
 const Header = Layout.Header;
 const Sider = Layout.Sider;
@@ -34,11 +35,15 @@ export default function () {
       props: {},
       children: [],
     } as any;
+
     if (type === "div") {
-      item.props.style = {
-        width: "100%",
-        height: "64px",
-        backgroundColor: "blue",
+      item.props = {
+        style: {
+          width: "100%",
+          height: "64px",
+          backgroundColor: "blue",
+        },
+        layout: "flex-column",
       };
     } else {
       item.props.style = {
@@ -128,7 +133,7 @@ export default function () {
               panes={[
                 <div
                   style={{
-                    overflow: "hidden",
+                    overflow: "auto",
                     width: "100%",
                     display: "flex",
                     justifyContent: "center",
@@ -146,7 +151,9 @@ export default function () {
               ]}
             ></ResizeBox.Split>
           </Content>
-          <Sider>检视器</Sider>
+          <Sider>
+            <Inspector />
+          </Sider>
         </Layout>
       </Layout>
     </Layout>
