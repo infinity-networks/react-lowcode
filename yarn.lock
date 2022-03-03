@@ -11,14 +11,14 @@
 
 "@arco-design/color@^0.4.0":
   version "0.4.0"
-  resolved "https://mirrors.cloud.tencent.com/npm/@arco-design%2fcolor/-/color-0.4.0.tgz#52ddb40d318ee6df1057ca8c653cc1675023928f"
+  resolved "https://registry.npmmirror.com/@arco-design/color/-/color-0.4.0.tgz#52ddb40d318ee6df1057ca8c653cc1675023928f"
   integrity sha512-s7p9MSwJgHeL8DwcATaXvWT3m2SigKpxx4JA1BGPHL4gfvaQsmQfrLBDpjOJFJuJ2jG2dMt3R3P8Pm9E65q18g==
   dependencies:
     color "^3.1.3"
 
 "@arco-design/web-react@^2.29.2":
   version "2.29.2"
-  resolved "https://mirrors.cloud.tencent.com/npm/@arco-design%2fweb-react/-/web-react-2.29.2.tgz#a50b448dbe76aab46a8d7f40f433696f36599034"
+  resolved "https://registry.npmmirror.com/@arco-design/web-react/-/web-react-2.29.2.tgz#a50b448dbe76aab46a8d7f40f433696f36599034"
   integrity sha512-nDMIWfuvYKlxc8lFBtaLPPDURtAJLmXu77r0KCH0Y6GB3S8mUQb7hs0hCC/K+1Pp5yzuVr05ESrEYovM8O5AvQ==
   dependencies:
     "@arco-design/color" "^0.4.0"
@@ -278,8 +278,8 @@
 
 "@icons/material@^0.2.4":
   version "0.2.4"
-  resolved "https://npm.corp.kuaishou.com/@icons%2fmaterial/-/material-0.2.4.tgz#e90c9f71768b3736e76d7dd6783fc6c2afa88bc8"
-  integrity sha1-6QyfcXaLNzbnbX3WeD/Gwq+oi8g=
+  resolved "https://registry.npmmirror.com/@icons/material/-/material-0.2.4.tgz#e90c9f71768b3736e76d7dd6783fc6c2afa88bc8"
+  integrity sha512-QPcGmICAPbGLGb6F/yNf/KzKqvFx8z5qx3D1yFqVAjoFmXK35EgyW+cJ57Te3CNsmzblwtzakLGFqHPqrfb4Tw==
 
 "@jridgewell/resolve-uri@^3.0.3":
   version "3.0.5"
@@ -315,9 +315,9 @@
   integrity sha512-Pc/AFTdwZwEKJxFJvlxrSmGe/di+aAOBn60sremrpLo6VI/6cmiUYNNwlI5KNYttg7uypzA3ILPMPgxB2GYZEg==
 
 "@reduxjs/toolkit@^1.7.2":
-  version "1.7.2"
-  resolved "https://registry.npmmirror.com/@reduxjs/toolkit/-/toolkit-1.7.2.tgz#b428aaef92582379464f9de698dbb71957eafb02"
-  integrity sha512-wwr3//Ar8ZhM9bS58O+HCIaMlR4Y6SNHfuszz9hKnQuFIKvwaL3Kmjo6fpDKUOjo4Lv54Yi299ed8rofCJ/Vjw==
+  version "1.8.0"
+  resolved "https://registry.npmmirror.com/@reduxjs/toolkit/-/toolkit-1.8.0.tgz#8ae875e481ed97e4a691aafa034f876bfd0413c4"
+  integrity sha512-cdfHWfcvLyhBUDicoFwG1u32JqvwKDxLxDd7zSmSoFw/RhYLOygIRtmaMjPRUUHmVmmAGAvquLLsKKU/677kSQ==
   dependencies:
     immer "^9.0.7"
     redux "^4.1.2"
@@ -347,23 +347,23 @@
 
 "@types/react-color@^3.0.6":
   version "3.0.6"
-  resolved "https://npm.corp.kuaishou.com/@types%2freact-color/-/react-color-3.0.6.tgz#602fed023802b2424e7cd6ff3594ccd3d5055f9a"
-  integrity sha1-YC/tAjgCskJOfNb/NZTM09UFX5o=
+  resolved "https://registry.npmmirror.com/@types/react-color/-/react-color-3.0.6.tgz#602fed023802b2424e7cd6ff3594ccd3d5055f9a"
+  integrity sha512-OzPIO5AyRmLA7PlOyISlgabpYUa3En74LP8mTMa0veCA719SvYQov4WLMsHvCgXP+L+KI9yGhYnqZafVGG0P4w==
   dependencies:
     "@types/react" "*"
     "@types/reactcss" "*"
 
 "@types/react-dom@^17.0.10":
-  version "17.0.11"
-  resolved "https://registry.npmmirror.com/@types/react-dom/-/react-dom-17.0.11.tgz#e1eadc3c5e86bdb5f7684e00274ae228e7bcc466"
-  integrity sha512-f96K3k+24RaLGVu/Y2Ng3e1EbZ8/cVJvypZWd7cy0ofCBaf2lcM46xNhycMZ2xGwbBjRql7hOlZ+e2WlJ5MH3Q==
+  version "17.0.12"
+  resolved "https://registry.npmmirror.com/@types/react-dom/-/react-dom-17.0.12.tgz#f08dfbc3c6d35084ffd3db6f09bdea8913de8494"
+  integrity sha512-SeJ430ndLI15JtRSHuzotn7AIdUtr8bdk6XW8mMfzjZo3vahRgJGHZqHiI4nAzCHTVG4qC21ObfsHBVUEHcDhg==
   dependencies:
     "@types/react" "*"
 
 "@types/react-redux@^7.1.20":
-  version "7.1.22"
-  resolved "https://registry.npmmirror.com/@types/react-redux/-/react-redux-7.1.22.tgz#0eab76a37ef477cc4b53665aeaf29cb60631b72a"
-  integrity sha512-GxIA1kM7ClU73I6wg9IRTVwSO9GS+SAKZKe0Enj+82HMU6aoESFU2HNAdNi3+J53IaOHPiUfT3kSG4L828joDQ==
+  version "7.1.23"
+  resolved "https://registry.npmmirror.com/@types/react-redux/-/react-redux-7.1.23.tgz#3c2bb1bcc698ae69d70735f33c5a8e95f41ac528"
+  integrity sha512-D02o3FPfqQlfu2WeEYwh3x2otYd2Dk1o8wAfsA0B1C2AJEFxE663Ozu7JzuWbznGgW248NaOF6wsqCGNq9d3qw==
   dependencies:
     "@types/hoist-non-react-statics" "^3.3.0"
     "@types/react" "*"
@@ -381,8 +381,8 @@
 
 "@types/reactcss@*":
   version "1.2.6"
-  resolved "https://npm.corp.kuaishou.com/@types%2freactcss/-/reactcss-1.2.6.tgz#133c1e7e896f2726370d1d5a26bf06a30a038bcc"
-  integrity sha1-EzwefolvJyY3DR1aJr8GowoDi8w=
+  resolved "https://registry.npmmirror.com/@types/reactcss/-/reactcss-1.2.6.tgz#133c1e7e896f2726370d1d5a26bf06a30a038bcc"
+  integrity sha512-qaIzpCuXNWomGR1Xq8SCFTtF4v8V27Y6f+b9+bzHiv087MylI/nTCqqdChNeWS7tslgROmYB7yeiruWX7WnqNg==
   dependencies:
     "@types/react" "*"
 
@@ -414,19 +414,19 @@ ansi-styles@^3.2.1:
 
 axios@^0.26.0:
   version "0.26.0"
-  resolved "https://npm.corp.kuaishou.com/axios/-/axios-0.26.0.tgz#9a318f1c69ec108f8cd5f3c3d390366635e13928"
+  resolved "https://registry.npmmirror.com/axios/-/axios-0.26.0.tgz#9a318f1c69ec108f8cd5f3c3d390366635e13928"
   integrity sha512-lKoGLMYtHvFrPVt3r+RBMp9nh34N0M8zEfCWqdWZx6phynIEhQqAdydpyBAAG211zlhX9Rgu08cOamy6XjE5Og==
   dependencies:
     follow-redirects "^1.14.8"
 
 b-tween@^0.3.3:
   version "0.3.3"
-  resolved "https://mirrors.cloud.tencent.com/npm/b-tween/-/b-tween-0.3.3.tgz#7a93ed199c98cd41a33ba4c711a0fa7e86db3fa2"
+  resolved "https://registry.npmmirror.com/b-tween/-/b-tween-0.3.3.tgz#7a93ed199c98cd41a33ba4c711a0fa7e86db3fa2"
   integrity sha512-oEHegcRpA7fAuc9KC4nktucuZn2aS8htymCPcP3qkEGPqiBH+GfqtqoG2l7LxHngg6O0HFM7hOeOYExl1Oz4ZA==
 
 b-validate@^1.3.4:
   version "1.3.4"
-  resolved "https://mirrors.cloud.tencent.com/npm/b-validate/-/b-validate-1.3.4.tgz#b51791be9176743463261c65bb89b4af84061f32"
+  resolved "https://registry.npmmirror.com/b-validate/-/b-validate-1.3.4.tgz#b51791be9176743463261c65bb89b4af84061f32"
   integrity sha512-7Bj+KFUcxk6c+qc3HiCR20qMOlHJmb7NSrVAS1amryVUT+7GTNqCp2Qk4XZP8XD3MBfZSqon/XlxNhHnxyB8ng==
   dependencies:
     lodash.isequal "^4.5.0"
@@ -458,13 +458,13 @@ chalk@^2.0.0:
 
 classcat@^5.0.3:
   version "5.0.3"
-  resolved "https://npm.corp.kuaishou.com/classcat/-/classcat-5.0.3.tgz#38eaa0ec6eb1b10faf101bbcef2afb319c23c17b"
-  integrity sha1-OOqg7G6xsQ+vEBu87yr7MZwjwXs=
+  resolved "https://registry.npmmirror.com/classcat/-/classcat-5.0.3.tgz#38eaa0ec6eb1b10faf101bbcef2afb319c23c17b"
+  integrity sha512-6dK2ke4VEJZOFx2ZfdDAl5OhEL8lvkl6EHF92IfRePfHxQTqir5NlcNVUv+2idjDqCX2NDc8m8YSAI5NI975ZQ==
 
 clsx@^1.1.1:
   version "1.1.1"
-  resolved "https://npm.corp.kuaishou.com/clsx/-/clsx-1.1.1.tgz#98b3134f9abbdf23b2663491ace13c5c03a73188"
-  integrity sha1-mLMTT5q73yOyZjSRrOE8XAOnMYg=
+  resolved "https://registry.npmmirror.com/clsx/-/clsx-1.1.1.tgz#98b3134f9abbdf23b2663491ace13c5c03a73188"
+  integrity sha512-6/bPho624p3S2pMyvP5kKBPXnI3ufHLObBFCfgx+LkeR5lg2XYy2hqZqUf45ypD8COn2bhgGJSUE+l5dhNBieA==
 
 color-convert@^1.9.0, color-convert@^1.9.3:
   version "1.9.3"
@@ -480,12 +480,12 @@ color-name@1.1.3:
 
 color-name@^1.0.0:
   version "1.1.4"
-  resolved "https://mirrors.tencent.com/npm/color-name/-/color-name-1.1.4.tgz#c2a09a87acbde69543de6f63fa3995c826c536a2"
+  resolved "https://registry.npmmirror.com/color-name/-/color-name-1.1.4.tgz#c2a09a87acbde69543de6f63fa3995c826c536a2"
   integrity sha512-dOy+3AuW3a2wNbZHIuMZpTcgjGuLU/uBL/ubcZF9OXbDo8ff4O8yVp5Bf0efS8uEoYo5q4Fx7dY9OgQGXgAsQA==
 
 color-string@^1.6.0:
   version "1.9.0"
-  resolved "https://mirrors.tencent.com/npm/color-string/-/color-string-1.9.0.tgz#63b6ebd1bec11999d1df3a79a7569451ac2be8aa"
+  resolved "https://registry.npmmirror.com/color-string/-/color-string-1.9.0.tgz#63b6ebd1bec11999d1df3a79a7569451ac2be8aa"
   integrity sha512-9Mrz2AQLefkH1UvASKj6v6hj/7eWgjnT/cVsR8CumieLoT+g900exWeNogqtweI8dxloXN9BDQTYro1oWu/5CQ==
   dependencies:
     color-name "^1.0.0"
@@ -493,7 +493,7 @@ color-string@^1.6.0:
 
 color@^3.1.3:
   version "3.2.1"
-  resolved "https://mirrors.tencent.com/npm/color/-/color-3.2.1.tgz#3544dc198caf4490c3ecc9a790b54fe9ff45e164"
+  resolved "https://registry.npmmirror.com/color/-/color-3.2.1.tgz#3544dc198caf4490c3ecc9a790b54fe9ff45e164"
   integrity sha512-aBl7dZI9ENN6fUGC7mWpMTPNHmWUSNan9tuWN6ahh5ZLNk9baLJOnSMlrQkHcrfFgz2/RigjUVAjdx36VcemKA==
   dependencies:
     color-convert "^1.9.3"
@@ -501,12 +501,12 @@ color@^3.1.3:
 
 compute-scroll-into-view@1.0.11:
   version "1.0.11"
-  resolved "https://mirrors.tencent.com/npm/compute-scroll-into-view/-/compute-scroll-into-view-1.0.11.tgz#7ff0a57f9aeda6314132d8994cce7aeca794fecf"
+  resolved "https://registry.npmmirror.com/compute-scroll-into-view/-/compute-scroll-into-view-1.0.11.tgz#7ff0a57f9aeda6314132d8994cce7aeca794fecf"
   integrity sha512-uUnglJowSe0IPmWOdDtrlHXof5CTIJitfJEyITHBW6zDVOGu9Pjk5puaLM73SLcwak0L4hEjO7Td88/a6P5i7A==
 
 compute-scroll-into-view@^1.0.17:
   version "1.0.17"
-  resolved "https://mirrors.tencent.com/npm/compute-scroll-into-view/-/compute-scroll-into-view-1.0.17.tgz#6a88f18acd9d42e9cf4baa6bec7e0522607ab7ab"
+  resolved "https://registry.npmmirror.com/compute-scroll-into-view/-/compute-scroll-into-view-1.0.17.tgz#6a88f18acd9d42e9cf4baa6bec7e0522607ab7ab"
   integrity sha512-j4dx+Fb0URmzbwwMUrhqWM2BEWHdFGx+qZ9qqASHRPqvTYdqvWnHg0H1hIbcyLnvgnoNAVMlwkepyqM3DaIFUg==
 
 convert-source-map@^1.7.0:
@@ -530,48 +530,48 @@ csstype@^3.0.2:
 
 "d3-color@1 - 3":
   version "3.0.1"
-  resolved "https://npm.corp.kuaishou.com/d3-color/-/d3-color-3.0.1.tgz#03316e595955d1fcd39d9f3610ad41bb90194d0a"
-  integrity sha1-AzFuWVlV0fzTnZ82EK1Bu5AZTQo=
+  resolved "https://registry.npmmirror.com/d3-color/-/d3-color-3.0.1.tgz#03316e595955d1fcd39d9f3610ad41bb90194d0a"
+  integrity sha512-6/SlHkDOBLyQSJ1j1Ghs82OIUXpKWlR0hCsw0XrLSQhuUPuCSmLQ1QPH98vpnQxMUQM2/gfAkUEWsupVpd9JGw==
 
 "d3-dispatch@1 - 3":
   version "3.0.1"
-  resolved "https://npm.corp.kuaishou.com/d3-dispatch/-/d3-dispatch-3.0.1.tgz#5fc75284e9c2375c36c839411a0cf550cbfc4d5e"
-  integrity sha1-X8dShOnCN1w2yDlBGgz1UMv8TV4=
+  resolved "https://registry.npmmirror.com/d3-dispatch/-/d3-dispatch-3.0.1.tgz#5fc75284e9c2375c36c839411a0cf550cbfc4d5e"
+  integrity sha512-rzUyPU/S7rwUflMyLc1ETDeBj0NRuHKKAcvukozwhshr6g6c5d8zh4c2gQjY2bZ0dXeGLWc1PF174P2tVvKhfg==
 
 "d3-drag@2 - 3":
   version "3.0.0"
-  resolved "https://npm.corp.kuaishou.com/d3-drag/-/d3-drag-3.0.0.tgz#994aae9cd23c719f53b5e10e3a0a6108c69607ba"
-  integrity sha1-mUqunNI8cZ9TteEOOgphCMaWB7o=
+  resolved "https://registry.npmmirror.com/d3-drag/-/d3-drag-3.0.0.tgz#994aae9cd23c719f53b5e10e3a0a6108c69607ba"
+  integrity sha512-pWbUJLdETVA8lQNJecMxoXfH6x+mO2UQo8rSmZ+QqxcbyA3hfeprFgIT//HW2nlHChWeIIMwS2Fq+gEARkhTkg==
   dependencies:
     d3-dispatch "1 - 3"
     d3-selection "3"
 
 "d3-ease@1 - 3":
   version "3.0.1"
-  resolved "https://npm.corp.kuaishou.com/d3-ease/-/d3-ease-3.0.1.tgz#9658ac38a2140d59d346160f1f6c30fda0bd12f4"
-  integrity sha1-llisOKIUDVnTRhYPH2ww/aC9EvQ=
+  resolved "https://registry.npmmirror.com/d3-ease/-/d3-ease-3.0.1.tgz#9658ac38a2140d59d346160f1f6c30fda0bd12f4"
+  integrity sha512-wR/XK3D3XcLIZwpbvQwQ5fK+8Ykds1ip7A2Txe0yxncXSdq1L9skcG7blcedkOX+ZcgxGAmLX1FrRGbADwzi0w==
 
 "d3-interpolate@1 - 3":
   version "3.0.1"
-  resolved "https://npm.corp.kuaishou.com/d3-interpolate/-/d3-interpolate-3.0.1.tgz#3c47aa5b32c5b3dfb56ef3fd4342078a632b400d"
-  integrity sha1-PEeqWzLFs9+1bvP9Q0IHimMrQA0=
+  resolved "https://registry.npmmirror.com/d3-interpolate/-/d3-interpolate-3.0.1.tgz#3c47aa5b32c5b3dfb56ef3fd4342078a632b400d"
+  integrity sha512-3bYs1rOD33uo8aqJfKP3JWPAibgw8Zm2+L9vBKEHJ2Rg+viTR7o5Mmv5mZcieN+FRYaAOWX5SJATX6k1PWz72g==
   dependencies:
     d3-color "1 - 3"
 
 "d3-selection@2 - 3", d3-selection@3, d3-selection@^3.0.0:
   version "3.0.0"
-  resolved "https://npm.corp.kuaishou.com/d3-selection/-/d3-selection-3.0.0.tgz#c25338207efa72cc5b9bd1458a1a41901f1e1b31"
-  integrity sha1-wlM4IH76csxbm9FFihpBkB8eGzE=
+  resolved "https://registry.npmmirror.com/d3-selection/-/d3-selection-3.0.0.tgz#c25338207efa72cc5b9bd1458a1a41901f1e1b31"
+  integrity sha512-fmTRWbNMmsmWq6xJV8D19U/gw/bwrHfNXxrIN+HfZgnzqTHp9jOmKMhsTUjXOJnZOdZY9Q28y4yebKzqDKlxlQ==
 
 "d3-timer@1 - 3":
   version "3.0.1"
-  resolved "https://npm.corp.kuaishou.com/d3-timer/-/d3-timer-3.0.1.tgz#6284d2a2708285b1abb7e201eda4380af35e63b0"
-  integrity sha1-YoTSonCChbGrt+IB7aQ4CvNeY7A=
+  resolved "https://registry.npmmirror.com/d3-timer/-/d3-timer-3.0.1.tgz#6284d2a2708285b1abb7e201eda4380af35e63b0"
+  integrity sha512-ndfJ/JxxMd3nw31uyKoY2naivF+r29V+Lc0svZxe1JvvIRmi8hUsrMvdOwgS1o6uBHmiz91geQ0ylPP0aj1VUA==
 
 "d3-transition@2 - 3":
   version "3.0.1"
-  resolved "https://npm.corp.kuaishou.com/d3-transition/-/d3-transition-3.0.1.tgz#6869fdde1448868077fdd5989200cb61b2a1645f"
-  integrity sha1-aGn93hRIhoB3/dWYkgDLYbKhZF8=
+  resolved "https://registry.npmmirror.com/d3-transition/-/d3-transition-3.0.1.tgz#6869fdde1448868077fdd5989200cb61b2a1645f"
+  integrity sha512-ApKvfjsSR6tg06xrL434C0WydLr7JewBB3V+/39RMHsaXTOG0zmt/OAXeng5M5LBm0ojmxJrpomQVZ1aPvBL4w==
   dependencies:
     d3-color "1 - 3"
     d3-dispatch "1 - 3"
@@ -581,8 +581,8 @@ csstype@^3.0.2:
 
 d3-zoom@^3.0.0:
   version "3.0.0"
-  resolved "https://npm.corp.kuaishou.com/d3-zoom/-/d3-zoom-3.0.0.tgz#d13f4165c73217ffeaa54295cd6969b3e7aee8f3"
-  integrity sha1-0T9BZccyF//qpUKVzWlps+eu6PM=
+  resolved "https://registry.npmmirror.com/d3-zoom/-/d3-zoom-3.0.0.tgz#d13f4165c73217ffeaa54295cd6969b3e7aee8f3"
+  integrity sha512-b8AmV3kfQaqWAuacbPuNbL6vahnOJflOhexLzMMNLga62+/nh0JzvJ0aO/5a5MVgUFGS7Hu1P9P03o3fJkDCyw==
   dependencies:
     d3-dispatch "1 - 3"
     d3-drag "2 - 3"
@@ -591,9 +591,9 @@ d3-zoom@^3.0.0:
     d3-transition "2 - 3"
 
 dayjs@^1.10.5:
-  version "1.10.7"
-  resolved "https://mirrors.tencent.com/npm/dayjs/-/dayjs-1.10.7.tgz#2cf5f91add28116748440866a0a1d26f3a6ce468"
-  integrity sha512-P6twpd70BcPK34K26uJ1KT3wlhpuOAPoMwJzpsIWUxHZ7wpmbdZL/hQqBDfz7hGurYSa5PhzdhDHtt319hL3ig==
+  version "1.10.8"
+  resolved "https://registry.npmmirror.com/dayjs/-/dayjs-1.10.8.tgz#267df4bc6276fcb33c04a6735287e3f429abec41"
+  integrity sha512-wbNwDfBHHur9UOzNUjeKUOJ0fCb0a52Wx0xInmQ7Y8FstyajiV1NmK1e00cxsr9YrE9r7yAChE0VvpuY5Rnlow==
 
 debug@^3.2.6:
   version "3.2.7"
@@ -611,7 +611,7 @@ debug@^4.1.0:
 
 detect-node-es@^1.1.0:
   version "1.1.0"
-  resolved "https://mirrors.cloud.tencent.com/npm/detect-node-es/-/detect-node-es-1.1.0.tgz#163acdf643330caa0b4cd7c21e7ee7755d6fa493"
+  resolved "https://registry.npmmirror.com/detect-node-es/-/detect-node-es-1.1.0.tgz#163acdf643330caa0b4cd7c21e7ee7755d6fa493"
   integrity sha512-ypdmJU/TbBby2Dxibuv7ZLW3Bs1QEmM7nHjEANfohJLvE0XVujisn1qPJcZxg+qDucsr+bP6fLD1rPS3AhJ7EQ==
 
 dnd-core@14.0.1:
@@ -625,16 +625,16 @@ dnd-core@14.0.1:
 
 dom-helpers@^5.0.1:
   version "5.2.1"
-  resolved "https://mirrors.tencent.com/npm/dom-helpers/-/dom-helpers-5.2.1.tgz#d9400536b2bf8225ad98fe052e029451ac40e902"
+  resolved "https://registry.npmmirror.com/dom-helpers/-/dom-helpers-5.2.1.tgz#d9400536b2bf8225ad98fe052e029451ac40e902"
   integrity sha512-nRCa7CK3VTrM2NmGkIy4cbK7IZlgBE/PYMn55rrXefr5xXDP0LdtfPnblFDoVdcAfslJ7or6iqAUnx0CCGIWQA==
   dependencies:
     "@babel/runtime" "^7.8.7"
     csstype "^3.0.2"
 
 electron-to-chromium@^1.4.71:
-  version "1.4.72"
-  resolved "https://registry.npmmirror.com/electron-to-chromium/-/electron-to-chromium-1.4.72.tgz#19b871f1da8be8199b2330d694fc84fcdb72ecd9"
-  integrity sha512-9LkRQwjW6/wnSfevR21a3k8sOJ+XWSH7kkzs9/EUenKmuDkndP3W9y1yCZpOxufwGbX3JV8glZZSDb4o95zwXQ==
+  version "1.4.75"
+  resolved "https://registry.npmmirror.com/electron-to-chromium/-/electron-to-chromium-1.4.75.tgz#d1ad9bb46f2f1bf432118c2be21d27ffeae82fdd"
+  integrity sha512-LxgUNeu3BVU7sXaKjUDD9xivocQLxFtq6wgERrutdY/yIOps3ODOZExK1jg8DTEg4U8TUCb5MLGeWFOYuxjF3Q==
 
 errno@^0.1.1:
   version "0.1.8"
@@ -785,14 +785,14 @@ fast-deep-equal@^3.1.3:
 
 focus-lock@^0.10.2:
   version "0.10.2"
-  resolved "https://mirrors.cloud.tencent.com/npm/focus-lock/-/focus-lock-0.10.2.tgz#561c62bae8387ecba1dd8e58a6df5ec29835c644"
+  resolved "https://registry.npmmirror.com/focus-lock/-/focus-lock-0.10.2.tgz#561c62bae8387ecba1dd8e58a6df5ec29835c644"
   integrity sha512-DSaI/UHZ/02sg1P616aIWgToQcrKKBmcCvomDZ1PZvcJFj350PnWhSJxJ76T3e5/GbtQEARIACtbrdlrF9C5kA==
   dependencies:
     tslib "^2.0.3"
 
 follow-redirects@^1.14.8:
   version "1.14.9"
-  resolved "https://npm.corp.kuaishou.com/follow-redirects/-/follow-redirects-1.14.9.tgz#dd4ea157de7bfaf9ea9b3fbd85aa16951f78d8d7"
+  resolved "https://registry.npmmirror.com/follow-redirects/-/follow-redirects-1.14.9.tgz#dd4ea157de7bfaf9ea9b3fbd85aa16951f78d8d7"
   integrity sha512-MQDfihBQYMcyy5dhRDJUHcw7lb2Pv/TuE6xP1vyraLukNDHKbDxDNaOE3NbCAdKQApno+GPRyo1YAp89yCjK4w==
 
 fsevents@~2.3.2:
@@ -858,7 +858,7 @@ immer@^9.0.7:
 
 is-arrayish@^0.3.1:
   version "0.3.2"
-  resolved "https://mirrors.tencent.com/npm/is-arrayish/-/is-arrayish-0.3.2.tgz#4574a2ae56f7ab206896fb431eaeed066fdf8f03"
+  resolved "https://registry.npmmirror.com/is-arrayish/-/is-arrayish-0.3.2.tgz#4574a2ae56f7ab206896fb431eaeed066fdf8f03"
   integrity sha512-eVRqCvVlZbuw3GrM63ovNSNAeA1K16kaR/LRY/92w0zxQ5/1YzwblUX652i4Xs9RwAGjW9d9y6X88t8OaAJfWQ==
 
 is-core-module@^2.8.1:
@@ -892,7 +892,7 @@ json5@^2.1.2:
 
 less@^4.1.2:
   version "4.1.2"
-  resolved "http://mirrors.tencent.com/npm/less/-/less-4.1.2.tgz#6099ee584999750c2624b65f80145f8674e4b4b0"
+  resolved "https://registry.npmmirror.com/less/-/less-4.1.2.tgz#6099ee584999750c2624b65f80145f8674e4b4b0"
   integrity sha512-EoQp/Et7OSOVu0aJknJOtlXZsnr8XE8KwuzTHOLeVSEx8pVWUICc8Q0VYRHgzyjX78nMEyC/oztWFbgyhtNfDA==
   dependencies:
     copy-anything "^2.0.1"
@@ -909,18 +909,18 @@ less@^4.1.2:
 
 lodash-es@^4.17.15:
   version "4.17.21"
-  resolved "https://npm.corp.kuaishou.com/lodash-es/-/lodash-es-4.17.21.tgz#43e626c46e6591b7750beb2b50117390c609e3ee"
-  integrity sha1-Q+YmxG5lkbd1C+srUBFzkMYJ4+4=
+  resolved "https://registry.npmmirror.com/lodash-es/-/lodash-es-4.17.21.tgz#43e626c46e6591b7750beb2b50117390c609e3ee"
+  integrity sha512-mKnC+QJ9pWVzv+C4/U3rRsHapFfHvQFoFB92e52xeyGMcX6/OlIl78je1u8vePzYZSkkogMPJ2yjxxsb89cxyw==
 
 lodash.isequal@^4.5.0:
   version "4.5.0"
-  resolved "https://mirrors.cloud.tencent.com/npm/lodash.isequal/-/lodash.isequal-4.5.0.tgz#415c4478f2bcc30120c22ce10ed3226f7d3e18e0"
-  integrity sha1-QVxEePK8wwEgwizhDtMib30+GOA=
+  resolved "https://registry.npmmirror.com/lodash.isequal/-/lodash.isequal-4.5.0.tgz#415c4478f2bcc30120c22ce10ed3226f7d3e18e0"
+  integrity sha512-pDo3lu8Jhfjqls6GkMgpahsF9kCyayhgykjyLMNFTKWrpVdAQtYyB4muAMWozBB4ig/dtWAmsMxLEI8wuz+DYQ==
 
 lodash@^4.0.1, lodash@^4.17.15, lodash@^4.17.21:
   version "4.17.21"
-  resolved "https://npm.corp.kuaishou.com/lodash/-/lodash-4.17.21.tgz#679591c564c3bffaae8454cf0b3df370c3d6911c"
-  integrity sha1-Z5WRxWTDv/quhFTPCz3zcMPWkRw=
+  resolved "https://registry.npmmirror.com/lodash/-/lodash-4.17.21.tgz#679591c564c3bffaae8454cf0b3df370c3d6911c"
+  integrity sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==
 
 loose-envify@^1.1.0, loose-envify@^1.4.0:
   version "1.4.0"
@@ -939,7 +939,7 @@ make-dir@^2.1.0:
 
 material-colors@^1.2.1:
   version "1.2.6"
-  resolved "https://npm.corp.kuaishou.com/material-colors/-/material-colors-1.2.6.tgz#6d1958871126992ceecc72f4bcc4d8f010865f46"
+  resolved "https://registry.npmmirror.com/material-colors/-/material-colors-1.2.6.tgz#6d1958871126992ceecc72f4bcc4d8f010865f46"
   integrity sha512-6qE4B9deFBIa9YSpOc9O0Sgc43zTeVYbgDT5veRKSlB2+ZuHNoVVxA1L/ckMUayV9Ay9y7Z/SZCLcGteW9i7bg==
 
 mime@^1.4.1:
@@ -962,7 +962,7 @@ ms@^2.1.1:
   resolved "https://registry.npmmirror.com/ms/-/ms-2.1.3.tgz#574c8138ce1d2b5861f0b44579dbadd60c6615b2"
   integrity sha512-6FlzubTLZG3J2a/NVCAleEhjzq5oxgHyaCU9yYXvcLsvoVaHJq/s5xXI6/XXP6tz7R9xAOtHnSO/tXtF3WRTlA==
 
-nanoid@^3.2.0:
+nanoid@^3.3.1:
   version "3.3.1"
   resolved "https://registry.npmmirror.com/nanoid/-/nanoid-3.3.1.tgz#6347a18cac88af88f58af0b3594b723d5e99bb35"
   integrity sha512-n6Vs/3KGyxPQd6uO0eH4Bv0ojGSUvuLlIHtC3Y0kEO23YRge8H9x1GCzLn28YX0H66pMkxuaeESFq4tKISKwdw==
@@ -983,7 +983,7 @@ node-releases@^2.0.2:
 
 number-precision@^1.3.1:
   version "1.5.2"
-  resolved "https://mirrors.cloud.tencent.com/npm/number-precision/-/number-precision-1.5.2.tgz#22abbde9e2402629199b511deafcdb614e125875"
+  resolved "https://registry.npmmirror.com/number-precision/-/number-precision-1.5.2.tgz#22abbde9e2402629199b511deafcdb614e125875"
   integrity sha512-q7C1ZW3FyjsJ+IpGB6ykX8OWWa5+6M+hEY0zXBlzq1Sq1IPY9GeI3CQ9b2i6CMIYoeSuFhop2Av/OhCxClXqag==
 
 object-assign@^4.1.1:
@@ -1017,11 +1017,11 @@ pify@^4.0.1:
   integrity sha512-uB80kBFb/tfd68bVleG9T5GGsGPjJrLAUpR5PZIrhBnIaRTQRjqdJSsIKkOP6OAIFbj7GOrcudc5pNjZ+geV2g==
 
 postcss@^8.4.6:
-  version "8.4.6"
-  resolved "https://registry.npmmirror.com/postcss/-/postcss-8.4.6.tgz#c5ff3c3c457a23864f32cb45ac9b741498a09ae1"
-  integrity sha512-OovjwIzs9Te46vlEx7+uXB0PLijpwjXGKXjVGGPIGubGpq7uh5Xgf6D6FiJ/SzJMBosHDp6a2hiXOS97iBXcaA==
+  version "8.4.7"
+  resolved "https://registry.npmmirror.com/postcss/-/postcss-8.4.7.tgz#f99862069ec4541de386bf57f5660a6c7a0875a8"
+  integrity sha512-L9Ye3r6hkkCeOETQX6iOaWZgjp3LL6Lpqm6EtgbKrgqGGteRMNb9vzBfRL96YOSu8o7x3MfIH9Mo5cPJFGrW6A==
   dependencies:
-    nanoid "^3.2.0"
+    nanoid "^3.3.1"
     picocolors "^1.0.0"
     source-map-js "^1.0.2"
 
@@ -1041,15 +1041,15 @@ prr@~1.0.1:
 
 react-clientside-effect@^1.2.5:
   version "1.2.5"
-  resolved "https://mirrors.cloud.tencent.com/npm/react-clientside-effect/-/react-clientside-effect-1.2.5.tgz#e2c4dc3c9ee109f642fac4f5b6e9bf5bcd2219a3"
+  resolved "https://registry.npmmirror.com/react-clientside-effect/-/react-clientside-effect-1.2.5.tgz#e2c4dc3c9ee109f642fac4f5b6e9bf5bcd2219a3"
   integrity sha512-2bL8qFW1TGBHozGGbVeyvnggRpMjibeZM2536AKNENLECutp2yfs44IL8Hmpn8qjFQ2K7A9PnYf3vc7aQq/cPA==
   dependencies:
     "@babel/runtime" "^7.12.13"
 
 react-color@^2.19.3:
   version "2.19.3"
-  resolved "https://npm.corp.kuaishou.com/react-color/-/react-color-2.19.3.tgz#ec6c6b4568312a3c6a18420ab0472e146aa5683d"
-  integrity sha1-7GxrRWgxKjxqGEIKsEcuFGqlaD0=
+  resolved "https://registry.npmmirror.com/react-color/-/react-color-2.19.3.tgz#ec6c6b4568312a3c6a18420ab0472e146aa5683d"
+  integrity sha512-LEeGE/ZzNLIsFWa1TMe8y5VYqr7bibneWmvJwm1pCn/eNmrabWDh659JSPn9BuaMpEfU83WTOJfnCcjDZwNQTA==
   dependencies:
     "@icons/material" "^0.2.4"
     lodash "^4.17.15"
@@ -1093,15 +1093,15 @@ react-dom@^17.0.2:
 
 react-draggable@^4.4.4:
   version "4.4.4"
-  resolved "https://npm.corp.kuaishou.com/react-draggable/-/react-draggable-4.4.4.tgz#5b26d9996be63d32d285a426f41055de87e59b2f"
-  integrity sha1-WybZmWvmPTLShaQm9BBV3oflmy8=
+  resolved "https://registry.npmmirror.com/react-draggable/-/react-draggable-4.4.4.tgz#5b26d9996be63d32d285a426f41055de87e59b2f"
+  integrity sha512-6e0WdcNLwpBx/YIDpoyd2Xb04PB0elrDrulKUgdrIlwuYvxh5Ok9M+F8cljm8kPXXs43PmMzek9RrB1b7mLMqA==
   dependencies:
     clsx "^1.1.1"
     prop-types "^15.6.0"
 
 react-flow-renderer@^9.7.4:
   version "9.7.4"
-  resolved "https://npm.corp.kuaishou.com/react-flow-renderer/-/react-flow-renderer-9.7.4.tgz#11394c05ca953b650e2017d056c075fd3df9075c"
+  resolved "https://registry.npmmirror.com/react-flow-renderer/-/react-flow-renderer-9.7.4.tgz#11394c05ca953b650e2017d056c075fd3df9075c"
   integrity sha512-GxHBXzkn8Y+TEG8pul7h6Fjo4cKrT0kW9UQ34OAGZqAnSBLbBsx9W++TF8GiULBbTn3O8o7HtHxux685Op10mQ==
   dependencies:
     "@babel/runtime" "^7.16.7"
@@ -1115,7 +1115,7 @@ react-flow-renderer@^9.7.4:
 
 react-focus-lock@^2.2.1:
   version "2.8.1"
-  resolved "https://mirrors.cloud.tencent.com/npm/react-focus-lock/-/react-focus-lock-2.8.1.tgz#a28f06a4ef5eab7d4ef0d859512772ec1331d529"
+  resolved "https://registry.npmmirror.com/react-focus-lock/-/react-focus-lock-2.8.1.tgz#a28f06a4ef5eab7d4ef0d859512772ec1331d529"
   integrity sha512-4kb9I7JIiBm0EJ+CsIBQ+T1t5qtmwPRbFGYFQ0t2q2qIpbFbYTHDjnjJVFB7oMBtXityEOQehblJPjqSIf3Amg==
   dependencies:
     "@babel/runtime" "^7.0.0"
@@ -1159,7 +1159,7 @@ react-refresh@^0.11.0:
 
 react-transition-group@^4.3.0:
   version "4.4.2"
-  resolved "https://mirrors.tencent.com/npm/react-transition-group/-/react-transition-group-4.4.2.tgz#8b59a56f09ced7b55cbd53c36768b922890d5470"
+  resolved "https://registry.npmmirror.com/react-transition-group/-/react-transition-group-4.4.2.tgz#8b59a56f09ced7b55cbd53c36768b922890d5470"
   integrity sha512-/RNYfRAMlZwDSr6z4zNKV6xu53/e2BuaBbGhbyYIXTrmgu/bGHzmqOs7mJSJBHy9Ud+ApHx3QjrkKSp1pxvlFg==
   dependencies:
     "@babel/runtime" "^7.5.5"
@@ -1177,8 +1177,8 @@ react@^17.0.2:
 
 reactcss@^1.2.0:
   version "1.2.3"
-  resolved "https://npm.corp.kuaishou.com/reactcss/-/reactcss-1.2.3.tgz#c00013875e557b1cf0dfd9a368a1c3dab3b548dd"
-  integrity sha1-wAATh15Vexzw39mjaKHD2rO1SN0=
+  resolved "https://registry.npmmirror.com/reactcss/-/reactcss-1.2.3.tgz#c00013875e557b1cf0dfd9a368a1c3dab3b548dd"
+  integrity sha512-KiwVUcFu1RErkI97ywr8nvx8dNOpT03rbnma0SSalTYjkrPYaEajR4a/MRt6DZ46K6arDRbWMNHF+xH7G7n/8A==
   dependencies:
     lodash "^4.0.1"
 
@@ -1206,7 +1206,7 @@ reselect@^4.1.5:
 
 resize-observer-polyfill@^1.5.1:
   version "1.5.1"
-  resolved "https://mirrors.tencent.com/npm/resize-observer-polyfill/-/resize-observer-polyfill-1.5.1.tgz#0e9020dd3d21024458d4ebd27e23e40269810464"
+  resolved "https://registry.npmmirror.com/resize-observer-polyfill/-/resize-observer-polyfill-1.5.1.tgz#0e9020dd3d21024458d4ebd27e23e40269810464"
   integrity sha512-LwZrotdHOo12nQuZlHEmtuXdqGoOD0OhaxopaNFxWzInpEgaLWoVuAMbTzixuosCx2nEG58ngzW3vxdWoxIgdg==
 
 resolve@^1.22.0:
@@ -1219,9 +1219,9 @@ resolve@^1.22.0:
     supports-preserve-symlinks-flag "^1.0.0"
 
 rollup@^2.59.0:
-  version "2.68.0"
-  resolved "https://registry.npmmirror.com/rollup/-/rollup-2.68.0.tgz#6ccabfd649447f8f21d62bf41662e5caece3bd66"
-  integrity sha512-XrMKOYK7oQcTio4wyTz466mucnd8LzkiZLozZ4Rz0zQD+HeX4nUK4B8GrTX/2EvN2/vBF/i2WnaXboPxo0JylA==
+  version "2.69.0"
+  resolved "https://registry.npmmirror.com/rollup/-/rollup-2.69.0.tgz#82aa86682a45e9760146b736c1643bf435506156"
+  integrity sha512-kjER91tHyek8gAkuz7+558vSnTQ+pITEok1P0aNOS45ZXyngaqPsXJmSel4QPQnJo7EJMjXUU1/GErWkWiKORg==
   optionalDependencies:
     fsevents "~2.3.2"
 
@@ -1250,7 +1250,7 @@ scheduler@^0.20.2:
 
 scroll-into-view-if-needed@2.2.20:
   version "2.2.20"
-  resolved "https://mirrors.tencent.com/npm/scroll-into-view-if-needed/-/scroll-into-view-if-needed-2.2.20.tgz#3a46847a72233a3af9770e55df450f2a7f2e2a0e"
+  resolved "https://registry.npmmirror.com/scroll-into-view-if-needed/-/scroll-into-view-if-needed-2.2.20.tgz#3a46847a72233a3af9770e55df450f2a7f2e2a0e"
   integrity sha512-P9kYMrhi9f6dvWwTGpO5I3HgjSU/8Mts7xL3lkoH5xlewK7O9Obdc5WmMCzppln7bCVGNmf3qfoZXrpCeyNJXw==
   dependencies:
     compute-scroll-into-view "1.0.11"
@@ -1267,13 +1267,13 @@ semver@^6.3.0:
 
 shallowequal@^1.1.0:
   version "1.1.0"
-  resolved "https://mirrors.tencent.com/npm/shallowequal/-/shallowequal-1.1.0.tgz#188d521de95b9087404fd4dcb68b13df0ae4e7f8"
+  resolved "https://registry.npmmirror.com/shallowequal/-/shallowequal-1.1.0.tgz#188d521de95b9087404fd4dcb68b13df0ae4e7f8"
   integrity sha512-y0m1JoUZSlPAjXVtPPW70aZWfIL/dSP7AFkRnniLCrK/8MDKog3TySTBmckD+RObVxH0v4Tox67+F14PdED2oQ==
 
 simple-swizzle@^0.2.2:
   version "0.2.2"
-  resolved "https://mirrors.tencent.com/npm/simple-swizzle/-/simple-swizzle-0.2.2.tgz#a4da6b635ffcccca33f70d17cb92592de95e557a"
-  integrity sha1-pNprY1/8zMoz9w0Xy5JZLeleVXo=
+  resolved "https://registry.npmmirror.com/simple-swizzle/-/simple-swizzle-0.2.2.tgz#a4da6b635ffcccca33f70d17cb92592de95e557a"
+  integrity sha512-JA//kQgZtbuY83m+xT+tXJkmJncGMTFT+C+g2h2R9uxkYIrE2yy9sgmcLhCnw57/WSD+Eh3J97FPEDFnbXnDUg==
   dependencies:
     is-arrayish "^0.3.1"
 
@@ -1306,8 +1306,8 @@ supports-preserve-symlinks-flag@^1.0.0:
 
 tinycolor2@^1.4.1:
   version "1.4.2"
-  resolved "https://npm.corp.kuaishou.com/tinycolor2/-/tinycolor2-1.4.2.tgz#3f6a4d1071ad07676d7fa472e1fac40a719d8803"
-  integrity sha1-P2pNEHGtB2dtf6Ry4frECnGdiAM=
+  resolved "https://registry.npmmirror.com/tinycolor2/-/tinycolor2-1.4.2.tgz#3f6a4d1071ad07676d7fa472e1fac40a719d8803"
+  integrity sha512-vJhccZPs965sV/L2sU4oRQVAos0pQXwsvTLkWYdqJ+a8Q5kPFzJTuOFwy7UniPli44NKQGAglksjvOcpo95aZA==
 
 to-fast-properties@^2.0.0:
   version "2.0.0"
@@ -1316,7 +1316,7 @@ to-fast-properties@^2.0.0:
 
 tslib@^1.9.3:
   version "1.14.1"
-  resolved "https://mirrors.tencent.com/npm/tslib/-/tslib-1.14.1.tgz#cf2d38bdc34a134bcaf1091c41f6619e2f672d00"
+  resolved "https://registry.npmmirror.com/tslib/-/tslib-1.14.1.tgz#cf2d38bdc34a134bcaf1091c41f6619e2f672d00"
   integrity sha512-Xni35NKzjgMrwevysHTCArtLDpPvye8zV/0E4EyYn43P7/7qvQwPh9BGkHewbMulVntbigmcT7rdX3BNo9wRJg==
 
 tslib@^2.0.3, tslib@^2.3.0:
@@ -1325,27 +1325,27 @@ tslib@^2.0.3, tslib@^2.3.0:
   integrity sha512-77EbyPPpMz+FRFRuAFlWMtmgUWGe9UOG2Z25NqCwiIjRhOf5iKGuzSe5P2w1laq+FkRy4p+PCuVkJSGkzTEKVw==
 
 typescript@^4.5.4:
-  version "4.5.5"
-  resolved "https://registry.npmmirror.com/typescript/-/typescript-4.5.5.tgz#d8c953832d28924a9e3d37c73d729c846c5896f3"
-  integrity sha512-TCTIul70LyWe6IJWT8QSYeA54WQe8EjQFU4wY52Fasj5UKx88LNYKCgBEHcOMOrFF1rKGbD8v/xcNWVUq9SymA==
+  version "4.6.2"
+  resolved "https://registry.npmmirror.com/typescript/-/typescript-4.6.2.tgz#fe12d2727b708f4eef40f51598b3398baa9611d4"
+  integrity sha512-HM/hFigTBHZhLXshn9sN37H085+hQGeJHJ/X7LpBWLID/fbc2acUMfU+lGD98X81sKP+pFa9f0DZmCwB9GnbAg==
 
 use-callback-ref@^1.2.5:
   version "1.2.5"
-  resolved "https://mirrors.cloud.tencent.com/npm/use-callback-ref/-/use-callback-ref-1.2.5.tgz#6115ed242cfbaed5915499c0a9842ca2912f38a5"
+  resolved "https://registry.npmmirror.com/use-callback-ref/-/use-callback-ref-1.2.5.tgz#6115ed242cfbaed5915499c0a9842ca2912f38a5"
   integrity sha512-gN3vgMISAgacF7sqsLPByqoePooY3n2emTH59Ur5d/M8eg4WTWu1xp8i8DHjohftIyEx0S08RiYxbffr4j8Peg==
 
 use-sidecar@^1.0.5:
   version "1.0.5"
-  resolved "https://mirrors.cloud.tencent.com/npm/use-sidecar/-/use-sidecar-1.0.5.tgz#ffff2a17c1df42e348624b699ba6e5c220527f2b"
+  resolved "https://registry.npmmirror.com/use-sidecar/-/use-sidecar-1.0.5.tgz#ffff2a17c1df42e348624b699ba6e5c220527f2b"
   integrity sha512-k9jnrjYNwN6xYLj1iaGhonDghfvmeTmYjAiGvOr7clwKfPjMXJf4/HOr7oT5tJwYafgp2tG2l3eZEOfoELiMcA==
   dependencies:
     detect-node-es "^1.1.0"
     tslib "^1.9.3"
 
 vite@^2.8.0:
-  version "2.8.4"
-  resolved "https://registry.npmmirror.com/vite/-/vite-2.8.4.tgz#4e52a534289b7b4e94e646df2fc5556ceaa7336b"
-  integrity sha512-GwtOkkaT2LDI82uWZKcrpRQxP5tymLnC7hVHHqNkhFNknYr0hJUlDLfhVRgngJvAy3RwypkDCWtTKn1BjO96Dw==
+  version "2.8.6"
+  resolved "https://registry.npmmirror.com/vite/-/vite-2.8.6.tgz#32d50e23c99ca31b26b8ccdc78b1d72d4d7323d3"
+  integrity sha512-e4H0QpludOVKkmOsRyqQ7LTcMUDF3mcgyNU4lmi0B5JUbe0ZxeBBl8VoZ8Y6Rfn9eFKYtdXNPcYK97ZwH+K2ug==
   dependencies:
     esbuild "^0.14.14"
     postcss "^8.4.6"
