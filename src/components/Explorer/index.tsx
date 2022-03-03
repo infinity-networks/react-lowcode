@@ -1,6 +1,9 @@
-import { Button, Modal } from "@arco-design/web-react";
+import { Button, Input, Modal } from "@arco-design/web-react";
 import { nanoid } from "@reduxjs/toolkit";
+import axios from "axios";
+import React from "react";
 import { useState } from "react";
+import { RemoteComponent } from "../RemoteComponent";
 import SourceItem from "./SourceItem";
 
 const comlib = [
@@ -21,7 +24,13 @@ const comlib = [
   },
 ];
 
+const loadManifest = async (url: string) => {
+  return axios.get(`http://${url}/manifest.json`).then((res) => res.data);
+};
+
 export default function ({ onEndDrag }: any) {
+  const [comlibUrl, setComlibUrl] = useState("");
+  const [comlib, setComlib] = useState<any[]>([]);
   const [visible, setVisible] = useState(false);
   return (
     <div>
@@ -34,10 +43,34 @@ export default function ({ onEndDrag }: any) {
         autoFocus={false}
         focusLock={true}
       >
-        <p>
-          You can customize modal body text by the current situation. This modal
-          will be closed immediately once you press the OK button.
-        </p>
+        <Input
+          style={{ width: 350 }}
+          addBefore="http://"
+          allowClear
+          placeholder="Please enter"
+          defaultValue="127.0.0.1:8080"
+          onPressEnter={async (e) => {
+            const url = e.target.value || "127.0.0.1:8080";
+            const manifest = await loadManifest(url);
+            const comlib = Object.keys(manifest.components).map((key) => {
+              const component = manifest.components[key];
+              console.log("url", `http://${url}/${key}/${component.runtime}`);
+              console.log("com");
+              return {
+                id: nanoid(10),
+                name: key,
+                ...component,
+                type: (
+                  <RemoteComponent
+                    url={`http://${url}/${key}/${component.runtime}`}
+                  />
+                ),
+              };
+            });
+            setComlib(() => comlib);
+            console.log("comlib", comlib);
+          }}
+        />
       </Modal>
       <div
         style={{
@@ -46,7 +79,7 @@ export default function ({ onEndDrag }: any) {
           width: "100%",
         }}
       >
-        {comlib.map((item) => (
+        {(comlib || []).map((item) => (
           <SourceItem
             key={item.id}
             id={item.id}

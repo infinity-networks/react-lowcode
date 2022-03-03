@@ -1,18 +1,12 @@
-import axios from "axios";
 import React, { useCallback, useEffect, useState } from "react";
+import axios from "axios";
 
-interface RemoteComponentProps {
-  path: string;
-  props: any;
-}
-
-export const RemoteComponent = ({ path, props }: any) => {
+export const RemoteComponent = ({ url, props }: any) => {
   const [Component, setComponent] = useState<React.FC | null>(null);
 
-  const importComponent = useCallback(async () => {
-    const res = await axios.get(`http://127.0.0.1:8080/${path}`);
-    return res.data;
-  }, [path]);
+  const importComponent = useCallback(() => {
+    return axios.get(url).then((res) => res.data);
+  }, [url]);
 
   const loadComponent = useCallback(async () => {
     // new Function(`${await importComponent()}`)();

@@ -18,6 +18,7 @@ import { DeviceFrameset } from "react-device-frameset";
 import "./App.less";
 import Outline from "./components/Explorer/Outline";
 import Inspector from "./components/Inspector";
+import { RemoteComponent } from "./components/RemoteComponent";
 
 const Header = Layout.Header;
 const Sider = Layout.Sider;
@@ -147,7 +148,13 @@ export default function () {
                     />
                   </DeviceFrameset>
                 </div>,
-                <div style={{ minHeight: "48px" }}>逻辑</div>,
+                <div style={{ minHeight: "48px" }}>
+                  <RemoteComponent
+                    url={
+                      "http://127.0.0.1:8080/container/runtime.aba05dbffe961c2fa36f.js"
+                    }
+                  ></RemoteComponent>
+                </div>,
               ]}
             ></ResizeBox.Split>
           </Content>
