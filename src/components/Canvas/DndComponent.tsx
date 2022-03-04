@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useRef } from "react";
 import { useDrag, useDrop } from "react-dnd";
 import { ComNodeSchema, setFocusId } from "../../redux/codeTreeSlice";
+import { RemoteComponent } from "../RemoteComponent";
 
 interface DndComponentProps {
   node: ComNodeSchema;
@@ -131,10 +132,8 @@ export default function DndComponent({
     },
   });
 
-  const Component = node.type;
-
   drag(drop(ref));
-
+  console.log("node", node.props);
   return (
     <>
       {node.id === "root" ? (
@@ -159,15 +158,7 @@ export default function DndComponent({
             focusedNode(node.id);
           }}
         >
-          {typeof node.type === "string"
-            ? React.createElement(node.type, {
-                ...node.props,
-                key: node.id,
-                id: node.id,
-                type: node.type,
-                children,
-              })
-            : node.type}
+          <RemoteComponent url={node.type} props={node.props} />
         </div>
       )}
     </>

@@ -20,7 +20,7 @@ export const RemoteComponent = ({ url, props }: any) => {
   }, [loadComponent]);
 
   if (Component) {
-    return <Component {...props} />;
+    <Component {...props} />;
   }
 
   return null;

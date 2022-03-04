@@ -9,18 +9,18 @@ import DndComponent from "./DndComponent";
 
 interface CanvasProps {
   codeTree: CodeTreeState;
-  move: any;
+  onEndDrop: any;
   focusedNode: any;
 }
 
-export default function ({ codeTree, move, focusedNode }: CanvasProps) {
+export default function ({ codeTree, onEndDrop, focusedNode }: CanvasProps) {
   const renderTree = (node: ComNodeSchema, parentId: string): any => {
     return (
       <>
         <DndComponent
           key={node.id}
           node={node}
-          move={move}
+          move={onEndDrop}
           parentId={parentId}
           focusId={codeTree.foucsId as string}
           focusedNode={focusedNode}
@@ -52,7 +52,7 @@ export default function ({ codeTree, move, focusedNode }: CanvasProps) {
         mountTarget="body"
         style={{ width: "100%", height: "100%", border: "0" }}
       >
-        <DndFrame>{renderTree(codeTree, "")}</DndFrame>
+        <DndFrame>{renderTree(codeTree.root, "")}</DndFrame>
       </Frame>
     </>
   );

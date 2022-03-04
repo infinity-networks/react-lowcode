@@ -1,7 +1,7 @@
-import { createSlice, nanoid } from "@reduxjs/toolkit";
 import React from "react";
+import { createSlice, nanoid } from "@reduxjs/toolkit";
 import { isParentNode, traverse } from "../utils";
-import { ComInfoSchema } from "./comLibSlice";
+import axios from "axios";
 
 export interface ComNodeSchema {
   id: string;
@@ -11,52 +11,76 @@ export interface ComNodeSchema {
   children: ComNodeSchema[];
 }
 
+export interface ComInfoSchema {
+  name: string;
+  editor: string;
+  runtime: string;
+  inputs: Record<string, any>[];
+  outputs: Record<string, any>[];
+}
+
 export interface ComRefSchema {
   id: string;
   comInfo: ComInfoSchema;
 }
 
-export interface CodeTreeState extends ComNodeSchema {
+export interface ComManifestSchema {
+  name: string;
+  namespace: string;
+  uid: string;
+  version: string;
+  components: ComInfoSchema[]
+}
+
+export interface CodeTreeState {
   foucsId?: string;
-  comref?: ComRefSchema[];
+  root: ComNodeSchema;
+  comRef?: Record<string, ComInfoSchema> | any;
+  comLibs?: ComManifestSchema[];
 }
 
 const initialState: CodeTreeState = {
   foucsId: '',
-  id: 'root',
-  type: 'div',
-  title: '根节点',
-  props: {
-    style: {
-      width: '100%',
-      height: '100%',
-      backgroundColor: 'white',
-      display: 'flex',
-      flexDirection: 'column',
+  root: {
+    id: 'root',
+    type: 'div',
+    title: '根节点',
+    props: {
+      style: {
+        width: '100%',
+        height: '100%',
+        backgroundColor: 'white',
+        display: 'flex',
+        flexDirection: 'column',
+      },
+      layout: 'flex-column'
     },
-    layout: 'flex-column'
-  },
-  children: [
+    children: [
 
-  ],
-  comref: []
+    ],
+  },
+  comRef: {},
+  comLibs: []
 }
 
 const codeTree = createSlice({
   name: 'codeTree',
   initialState,
   reducers: {
-    append: (state, action) => {
-      const { hoverId, item } = action.payload;
-      traverse(state, (sub) => {
+    appendNode: (state, action) => {
+      const { hoverId, dragItem } = action.payload;
+      const comLibId = dragItem.comLibId, comName = dragItem.name;
+      let item = state.comLibs?.find(item => item.uid === comLibId)?.components.find(item => item.name === comName) as any;
+      console.log('appendNode', JSON.stringify(item))
+      traverse(state.root, (sub) => {
         if (sub.id === hoverId) {
-          sub.children.push(item)
+          sub.children.push({ ...item, props: { text: 'text' } })
           return false;
         }
         return true;
-      })
+      });
     },
-    move: (state, action) => {
+    moveNode: (state, action) => {
       const { dragItem, overItem, hoverPosition } = action.payload;
       // console.log('move', dragItem, overItem)
 
@@ -65,7 +89,7 @@ const codeTree = createSlice({
 
       let item: any;
 
-      traverse(state, (sub) => {
+      traverse(state.root, (sub) => {
         if (sub.id === dragParentId) {
           const dragIndex = sub.children.findIndex((item) => item.id === dragId);
           item = sub.children.splice(dragIndex, 1)[0];
@@ -75,7 +99,7 @@ const codeTree = createSlice({
       });
 
       if (!isParentNode(overType)) {
-        traverse(state, (sub) => {
+        traverse(state.root, (sub) => {
           if (sub.id === overParentId) {
             const dragIndex = sub.children.findIndex((item) => item.id === dragId);
             if (hoverPosition === 'left' || hoverPosition === 'top') {
@@ -96,7 +120,7 @@ const codeTree = createSlice({
           return true;
         });
       } else {
-        traverse(state, (sub) => {
+        traverse(state.root, (sub) => {
           if (sub.id === overId) {
             sub.children.push(item);
           }
@@ -104,19 +128,29 @@ const codeTree = createSlice({
         })
       }
     },
-    update: (state, action) => {
+    updateNode: (state, action) => {
 
     },
-    remove: (state, action) => {
+    removeNode: (state, action) => {
 
     },
     setFocusId: (state, action) => {
       const { foucsId } = action.payload;
       state.foucsId = foucsId;
     },
+    appendComLib: (state, action) => {
+      const { manifest } = action.payload;
+      const index: number = state.comLibs?.findIndex((item) => item.uid === manifest.uid) as any;
+      if (index === -1) {
+        state.comLibs?.push(manifest);
+      } else {
+        state.comLibs?.splice(index, 0, manifest)
+        state.comLibs?.splice(index, 1);
+      }
+    }
   }
 });
 
-export const { append, move, update, remove, setFocusId } = codeTree.actions;
+export const { appendNode, moveNode, updateNode, removeNode, setFocusId, appendComLib } = codeTree.actions;
 
 export default codeTree.reducer;
